@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Najot Ta'lim — Zamonaviy IT & Neon Kasblar Markazi | 2026</title>
+  <meta name="description" content="Najot Ta'lim — Sun'iy Intellekt, Dasturlash, Kiberxavfsizlik, Grafik va UI/UX dizayn bo'yicha neon uslubdagi zamonaviy ta'lim portali.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Self-Hosted Compiled Production Tailwind CSS -->
+  <link rel="stylesheet" href="assets/css/tailwind.prod.css">
+
+  <!-- Custom Neon Cyber Stylesheet with Monimer Serif & Watermark Protection -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Self-Hosted Lucide Icons -->
+  <script src="assets/js/lucide.min.js"></script>
+</head>
+<body class="bg-[#02040A] text-slate-100 antialiased selection:bg-[#00F0FF] selection:text-[#02040A] overflow-x-hidden">
+
+  <!-- Top Kinematic Reading Progress Line -->
+  <div id="scrollProgress"></div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTopBtn" aria-label="Yuqoriga qaytish" class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-xl bg-[#06122C]/90 border border-[#00F0FF]/40 text-[#00F0FF] flex items-center justify-center shadow-[0_0_20px_rgba(0,240,255,0.3)] hover:scale-110 active:scale-95 transition-all opacity-0 pointer-events-none">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- ========================================================================= -->
+  <!-- 1. CYBER NEON NAVBAR (HEADER)                                             -->
+  <!-- ========================================================================= -->
+  <header id="mainNavbar" class="fixed top-0 left-0 right-0 z-50 glass-cyber-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo with Neon Cyber Glow -->
+        <a href="#hero" class="flex items-center gap-3 group" aria-label="Bosh sahifa">
+          <img src="assets/images/logo.svg" alt="Najot Ta'lim Logo" class="h-10 w-auto transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300" aria-label="Asosiy navigatsiya">
+          <a href="#about" class="hover:text-[#00F0FF] transition-colors flex items-center gap-1.5">
+            <span class="text-[#00F0FF] text-xs font-mono font-bold">01.</span> Biz haqimizda
+          </a>
+          <a href="#courses" class="hover:text-[#00F0FF] transition-colors flex items-center gap-1.5">
+            <span class="text-[#00F0FF] text-xs font-mono font-bold">02.</span> Kurslar (10 ta)
+          </a>
+          <a href="#feedback" class="hover:text-[#00F0FF] transition-colors flex items-center gap-1.5">
+            <span class="text-[#00F0FF] text-xs font-mono font-bold">03.</span> Natijalar & Fikrlar
+          </a>
+          <a href="#faq" class="hover:text-[#00F0FF] transition-colors flex items-center gap-1.5">
+            <span class="text-[#00F0FF] text-xs font-mono font-bold">04.</span> Savol-javob
+          </a>
+        </nav>
+
+        <!-- CTA & Phone (Desktop) -->
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="tel:+998788889888" class="flex items-center gap-2.5 text-xs font-mono text-slate-300 hover:text-[#00F0FF] transition-colors" aria-label="+998 78 888 98 88 ga qo'ng'iroq qilish">
+            <span class="w-8 h-8 rounded-lg bg-[#060F24] flex items-center justify-center text-[#00F0FF] border border-[#00F0FF]/30 shadow-[0_0_10px_rgba(0,240,255,0.2)]">
+              <i data-lucide="phone-call" class="w-4 h-4"></i>
+            </span>
+            <span class="font-bold tracking-wider">+998 78 888 98 88</span>
+          </a>
+          <a href="#contact" class="px-5 py-2.5 rounded-xl btn-neon-primary text-xs uppercase tracking-wider font-extrabold flex items-center gap-2">
+            <span>Konsultatsiya</span>
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Trigger -->
+        <div class="flex md:hidden items-center gap-3">
+          <a href="#contact" class="px-3 py-1.5 rounded-lg btn-neon-primary text-xs font-black uppercase">
+            Ariza
+          </a>
+          <button id="mobileMenuBtn" aria-label="Menyuni ochish" class="p-2 text-slate-300 hover:text-[#00F0FF] focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 bg-[#02040A]/95 backdrop-blur-2xl hidden opacity-0 transition-opacity duration-300 flex flex-col p-6 border-b border-[#00F0FF]/20" aria-label="Mobil menyu">
+    <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+      <img src="assets/images/logo.svg" alt="Najot Ta'lim Logo" class="h-9 w-auto">
+      <button id="mobileMenuClose" aria-label="Menyuni yopish" class="p-2 text-slate-400 hover:text-[#00F0FF]">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div class="flex flex-col gap-5 py-8 text-lg font-bold text-slate-200">
+      <a href="#about" class="mobile-nav-link hover:text-[#00F0FF] flex items-center gap-2">
+        <span class="text-[#00F0FF] font-mono text-sm">01.</span> Biz haqimizda
+      </a>
+      <a href="#courses" class="mobile-nav-link hover:text-[#00F0FF] flex items-center gap-2">
+        <span class="text-[#00F0FF] font-mono text-sm">02.</span> Kurslar katalogi (10 ta)
+      </a>
+      <a href="#feedback" class="mobile-nav-link hover:text-[#00F0FF] flex items-center gap-2">
+        <span class="text-[#00F0FF] font-mono text-sm">03.</span> Bitiruvchilar natijalari
+      </a>
+      <a href="#faq" class="mobile-nav-link hover:text-[#00F0FF] flex items-center gap-2">
+        <span class="text-[#00F0FF] font-mono text-sm">04.</span> Ko'p beriladigan savollar
+      </a>
+      <a href="#contact" class="mobile-nav-link hover:text-[#00F0FF] flex items-center gap-2">
+        <span class="text-[#00F0FF] font-mono text-sm">05.</span> Murojaat anketasi
+      </a>
+    </div>
+    <div class="mt-auto pt-6 border-t border-slate-800 flex flex-col gap-4">
+      <a href="tel:+998788889888" class="text-center py-3.5 rounded-xl bg-[#060F24] border border-[#00F0FF]/30 text-[#00F0FF] font-mono font-bold">
+        📞 +998 78 888 98 88
+      </a>
+      <a href="#contact" class="mobile-nav-link text-center py-3.5 rounded-xl btn-neon-primary text-xs uppercase tracking-wider font-extrabold shadow-lg">
+        Ariza qoldirish
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================= -->
+    <!-- 2. HERO SECTION & KOMPANIYA HAQIDA QISQA MA'LUMOT                         -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="relative pt-32 pb-24 md:pt-44 md:pb-36 overflow-hidden">
+      <!-- Neon Ambient Spheres -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] glow-orb-cyan blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/3 -left-40 w-[600px] h-[600px] glow-orb-blue blur-3xl pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Left Column -->
+          <div class="lg:col-span-7 text-center lg:text-left space-y-7 reveal-init">
+            
+            <!-- Live Neon Status Pill -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#050D1E]/90 border border-[#00F0FF]/40 text-xs font-mono font-semibold text-[#00F0FF] shadow-[0_0_15px_rgba(0,240,255,0.25)]">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#00F0FF] neon-pulse-dot"></span>
+              <span>2026 NEON INTAKE · QABUL BOSHQICHI OCHIQ</span>
+            </div>
+
+            <!-- Main Title with Monimer Serif Display Font -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-normal tracking-wide leading-[1.12]">
+              Kelajak kasblari <br>
+              <span class="text-gradient-electric font-display">Najot Ta'lim</span> bilan
+            </h1>
+
+            <!-- Subtitle Description -->
+            <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Sun'iy intellekt, Dasturlash, Kiberxavfsizlik va Yuqori texnologiyali dizayn sohalarida xalqaro standartdagi mutaxassis bo'ling. Nazariya emas, <strong class="text-[#00F0FF] font-semibold">100% amaliy keyslar</strong> va kuchli amaliyotchi mentorlar bilan.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+              <a href="#courses" class="w-full sm:w-auto px-8 py-4 rounded-xl btn-neon-primary text-sm uppercase tracking-wider font-extrabold text-center flex items-center justify-center gap-2 group">
+                <span>10 ta Kursni ko'rish</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+              </a>
+              <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl btn-neon-secondary text-sm font-bold text-center flex items-center justify-center gap-2">
+                <i data-lucide="terminal" class="w-4 h-4 text-[#00F0FF]"></i>
+                <span>Bepul konsultatsiya</span>
+              </a>
+            </div>
+
+            <!-- Cinematic Stats Bar -->
+            <div class="grid grid-cols-3 gap-4 pt-8 border-t border-[#00F0FF]/15">
+              <div class="text-center lg:text-left">
+                <p class="text-2xl sm:text-4xl font-mono font-bold text-white">15,000<span class="text-[#00F0FF]">+</span></p>
+                <p class="text-xs text-slate-300 mt-1 uppercase tracking-wider font-semibold">Bitiruvchilar</p>
+              </div>
+              <div class="text-center lg:text-left">
+                <p class="text-2xl sm:text-4xl font-mono font-bold text-white">85<span class="text-[#0066FF]">%</span></p>
+                <p class="text-xs text-slate-300 mt-1 uppercase tracking-wider font-semibold">Ishga joylashish</p>
+              </div>
+              <div class="text-center lg:text-left">
+                <p class="text-2xl sm:text-4xl font-mono font-bold text-white">100<span class="text-[#38BDF8]">+</span></p>
+                <p class="text-xs text-slate-300 mt-1 uppercase tracking-wider font-semibold">Top Mentorlar</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Right Column: Cyber Visual Card using Monimer poster -->
+          <div class="lg:col-span-5 relative reveal-scale delay-200">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              
+              <!-- Frame -->
+              <div class="relative rounded-2xl overflow-hidden border border-[#00F0FF]/40 shadow-[0_0_40px_rgba(0,240,255,0.2)] bg-[#040914] group">
+                
+                <!-- Terminal Header Bar (Enhanced Contrast) -->
+                <div class="flex items-center justify-between px-4 py-2.5 bg-[#02050D] border-b border-[#00F0FF]/20 font-mono text-[11px] text-slate-300">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-[#00F0FF]"></span>
+                  </div>
+                  <span class="text-[#00F0FF] font-semibold">najot_talim_core.sh</span>
+                  <span class="text-[10px] text-slate-400 font-bold">v2026.1</span>
+                </div>
+
+                <div class="relative h-[380px] overflow-hidden">
+                  <img src="assets/images/hero-ai-core.jpg" alt="Najot Ta'lim Sun'iy Intellekt va Zamonaviy Texnologiyalar Yadrosi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#02040A] via-[#02040A]/30 to-transparent"></div>
+                  
+                  <!-- Floating Code Snippet Card -->
+                  <div class="absolute bottom-5 left-5 right-5 p-4 rounded-xl glass-cyber-card border border-[#00F0FF]/30 font-mono text-xs">
+                    <div class="flex items-center justify-between text-[#00F0FF] font-bold text-[11px] mb-1">
+                      <span>STATUS: ONLINE</span>
+                      <span>100% AMALIYOT</span>
+                    </div>
+                    <p class="text-slate-300 text-[11px] leading-relaxed">
+                      const student = new Specialist({ focus: "AI & FullStack", salary: "High" });
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Floating Cyber Badge 1 -->
+              <div class="absolute -top-5 -left-5 p-3 rounded-xl glass-cyber-card border border-[#00F0FF]/50 shadow-[0_0_20px_rgba(0,240,255,0.3)] hidden sm:flex items-center gap-3 animate-cyber-float">
+                <div class="w-9 h-9 rounded-lg bg-[#00F0FF] flex items-center justify-center text-[#02040A] font-black">
+                  <i data-lucide="cpu" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-black text-white font-mono">AI & LLM AGENTS</p>
+                  <p class="text-[10px] text-[#00F0FF]">Kelajak texnologiyasi</p>
+                </div>
+              </div>
+
+              <!-- Floating Cyber Badge 2 -->
+              <div class="absolute -bottom-5 -right-5 p-3 rounded-xl glass-cyber-card border border-[#0066FF]/60 shadow-[0_0_20px_rgba(0,102,255,0.3)] hidden sm:flex items-center gap-3 animate-cyber-float-slow">
+                <div class="w-9 h-9 rounded-lg bg-[#0066FF] flex items-center justify-center text-white font-black">
+                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-black text-white font-mono">DIPLOM & KARYERA</p>
+                  <p class="text-[10px] text-slate-300">Rasmiy kafolat</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Cinematic Neon Laser Divider -->
+    <div class="neon-beam w-full"></div>
+
+    <!-- ========================================================================= -->
+    <!-- 3. KOMPANIYA HAQIDA BATAFSIL (ABOUT SECTION)                              -->
+    <!-- ========================================================================= -->
+    <section id="about" class="py-24 relative bg-[#030611]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Title with Monimer Serif -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 reveal-init">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-[#00F0FF] bg-[#00F0FF]/10 px-3.5 py-1.5 rounded-full border border-[#00F0FF]/30 shadow-[0_0_12px_rgba(0,240,255,0.2)]">
+            // KOMPANIYA HAQIDA
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-display font-normal text-white">
+            Nega aynan <span class="text-gradient-electric font-display">Najot Ta'lim?</span>
+          </h2>
+          <p class="text-slate-300 text-base leading-relaxed">
+            Biz shunchaki o'qitmaymiz, zamonaviy bozor talablariga 100% javob beradigan, kuchli raqobatbardosh mutaxassislarni tayyorlaymiz.
+          </p>
+        </div>
+
+        <!-- 4 Cyber Core Pillars Grid (Proper Heading Hierarchy H3) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Pillar 1 -->
+          <div class="glass-cyber-card p-7 rounded-2xl reveal-left delay-100 group">
+            <div class="w-12 h-12 rounded-xl bg-[#00F0FF]/10 text-[#00F0FF] flex items-center justify-center mb-5 border border-[#00F0FF]/30 group-hover:bg-[#00F0FF] group-hover:text-[#02040A] transition-all shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-display text-white mb-2">Top Mentorlar</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Yirik IT kompaniyalarda faoliyat yurituvchi, sohada ko'p yillik real tajribaga ega amaliyotchi ekspertlar.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="glass-cyber-card p-7 rounded-2xl reveal-left delay-200 group">
+            <div class="w-12 h-12 rounded-xl bg-[#0066FF]/10 text-[#38BDF8] flex items-center justify-center mb-5 border border-[#0066FF]/30 group-hover:bg-[#0066FF] group-hover:text-white transition-all shadow-[0_0_15px_rgba(0,102,255,0.2)]">
+              <i data-lucide="laptop" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-display text-white mb-2">24/7 Coworking</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Darsdan tashqari vaqtda ham markazimizning yuqori tezlikdagi internet va qulay coworking maydonlarida erkin shug'ullanish.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="glass-cyber-card p-7 rounded-2xl reveal-right delay-300 group">
+            <div class="w-12 h-12 rounded-xl bg-[#00F0FF]/10 text-[#00F0FF] flex items-center justify-center mb-5 border border-[#00F0FF]/30 group-hover:bg-[#00F0FF] group-hover:text-[#02040A] transition-all shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+              <i data-lucide="briefcase" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-display text-white mb-2">Karyera Markazi</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Rezyume tuzish, texnik intervyularga tayyorgarlik va 100+ yetakchi hamkor kompaniyalarga ishga tavsiya etish.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="glass-cyber-card p-7 rounded-2xl reveal-right delay-400 group">
+            <div class="w-12 h-12 rounded-xl bg-[#0066FF]/10 text-[#38BDF8] flex items-center justify-center mb-5 border border-[#0066FF]/30 group-hover:bg-[#0066FF] group-hover:text-white transition-all shadow-[0_0_15px_rgba(0,102,255,0.2)]">
+              <i data-lucide="folder-git-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-display text-white mb-2">Real Portfolio</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              O'qish davomida xalqaro bozorda ko'rsatishga arziydigan kamida 3-5 ta mustaqil amaliy loyihalar yaratasiz.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Cinematic Neon Laser Divider -->
+    <div class="neon-beam w-full"></div>
+
+    <!-- ========================================================================= -->
+    <!-- 4. MAHSULOTLAR / 10 GA YAQIN NEON KURSLAR KATALOGI                        -->
+    <!-- ========================================================================= -->
+    <section id="courses" class="py-28 relative bg-[#02040A]">
+      <div class="absolute top-1/2 right-0 w-[600px] h-[600px] glow-orb-cyan blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header with Monimer Serif & Protected Clean Digits -->
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-4 reveal-init">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-[#00F0FF] bg-[#00F0FF]/10 px-3.5 py-1.5 rounded-full border border-[#00F0FF]/30 shadow-[0_0_12px_rgba(0,240,255,0.2)]">
+            // MAHSULOTLARIMIZ
+          </span>
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-display font-normal text-white">
+            <span class="font-sans font-black text-[#00F0FF]">10</span> ta Zamonaviy <span class="text-gradient-electric font-display">Kasb Kurslari</span>
+          </h2>
+          <p class="text-slate-300 text-base">
+            O'zingizga mos sohani tanlang va yangi davr talablariga mos yuqori daromadli mutaxassisga aylaning.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 mb-14 reveal-init delay-100" role="tablist" aria-label="Kurslar toifalari">
+          <button class="tab-btn active px-6 py-3 rounded-xl text-xs uppercase tracking-wider font-mono font-bold transition-all" role="tab" aria-selected="true" data-filter="all">
+            Barcha kurslar (10)
+          </button>
+          <button class="tab-btn px-6 py-3 rounded-xl text-xs uppercase tracking-wider font-mono font-bold bg-[#060F24] text-slate-300 hover:text-[#00F0FF] border border-[#00F0FF]/20 transition-all" role="tab" aria-selected="false" data-filter="ai">
+            🤖 Sun'iy Intellekt (AI)
+          </button>
+          <button class="tab-btn px-6 py-3 rounded-xl text-xs uppercase tracking-wider font-mono font-bold bg-[#060F24] text-slate-300 hover:text-[#00F0FF] border border-[#00F0FF]/20 transition-all" role="tab" aria-selected="false" data-filter="dev">
+            💻 Dasturlash & Kiberxavfsizlik
+          </button>
+          <button class="tab-btn px-6 py-3 rounded-xl text-xs uppercase tracking-wider font-mono font-bold bg-[#060F24] text-slate-300 hover:text-[#00F0FF] border border-[#00F0FF]/20 transition-all" role="tab" aria-selected="false" data-filter="design">
+            🎨 Dizayn & Marketing
+          </button>
+        </div>
+
+        <!-- 10 Course Cards Grid (Proper Heading Hierarchy H3) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="courseGrid">
+
+          <!-- 1. AI Muhandisligi -->
+          <div class="course-card glass-cyber-card rounded-2xl overflow-hidden flex flex-col reveal-scale delay-100" data-category="ai">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/courses/course-ai-eng.jpg" alt="AI Muhandisligi kursi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#00F0FF] text-[#02040A] font-mono font-extrabold text-[11px] px-2.5 py-1 rounded uppercase tracking-wider shadow-[0_0_10px_#00F0FF]">
+                Top AI Tanlov
+              </span>
+              <span class="absolute top-3 right-3 bg-[#02040A]/90 text-[#00F0FF] font-mono font-bold text-xs px-2.5 py-1 rounded border border-[#00F0FF]/40">
+                8 oy
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 text-xs text-[#00F0FF] font-mono font-semibold mb-2">
+                  <i data-lucide="bot" class="w-4 h-4"></i>
+                  <span>AI Engineering</span>
+                </div>
+                <h3 class="text-2xl font-display text-white mb-2">AI Muhandisligi</h3>
+                <p class="text-slate-300 text-sm line-clamp-2 mb-4 leading-relaxed">
+                  LLM, PyTorch, OpenAI API, LangChain va neyron tarmoqlar integratsiyasi.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">PyTorch</span>
+                  <span class="tech-tag">LLM / RAG</span>
+                  <span class="tech-tag">LangChain</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-[#00F0FF]/15">
+                <button class="view-detail-btn flex-1 py-2.5 rounded-xl bg-[#06122C] hover:bg-[#0A1B3D] text-[#38BDF8] border border-[#00F0FF]/25 font-mono font-bold text-xs transition-colors" data-course-key="ai-eng">
+                  Batafsil
+                </button>
+                <button class="enroll-course-btn flex-1 py-2.5 rounded-xl btn-neon-primary text-xs uppercase font-extrabold transition-all" data-course="AI Muhandisligi">
+                  Yozilish
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. AI Avtomatlashtirish & Agentlar -->
+          <div class="course-card glass-cyber-card rounded-2xl overflow-hidden flex flex-col reveal-scale delay-200" data-category="ai">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/courses/course-ai-auto.jpg" alt="AI Avtomatlashtirish & Agentlar kursi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#0066FF] text-white font-mono font-extrabold text-[11px] px-2.5 py-1 rounded uppercase tracking-wider shadow-[0_0_10px_#0066FF]">
+                Trend 2026
+              </span>
+              <span class="absolute top-3 right-3 bg-[#02040A]/90 text-[#00F0FF] font-mono font-bold text-xs px-2.5 py-1 rounded border border-[#00F0FF]/40">
+                4 oy
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 text-xs text-[#00F0FF] font-mono font-semibold mb-2">
+                  <i data-lucide="zap" class="w-4 h-4"></i>
+                  <span>Automation</span>
+                </div>
+                <h3 class="text-2xl font-display text-white mb-2">AI Avtomatlashtirish & Agentlar</h3>
+                <p class="text-slate-300 text-sm line-clamp-2 mb-4 leading-relaxed">
+                  Biznes jarayonlarini n8n, Make, Python va AI agentlar yordamida to'liq avtomatlashtirish.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-tag">n8n</span>
+                  <span class="tech-tag">Make</span>
+                  <span class="tech-tag">AI Agents</span>
+                  <span class="tech-tag">Telegram Bot</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-[#00F0FF]/15">
+                <button class="view-detail-btn flex-1 py-2.5 rounded-xl bg-[#06122C] hover:bg-[#0A1B3D] text-[#38BDF8] border border-[#00F0FF]/25 font-mono font-bold text-xs transition-colors" data-course-key="ai-auto">
+                  Batafsil
+                </button>
+                <button class="enroll-course-btn flex-1 py-2.5 rounded-xl btn-neon-primary text-xs uppercase font-extrabold transition-all" data-course="AI Avtomatlashtirish">
+                  Yozilish
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Frontend Dasturlash -->
+          <div class="course-card glass-cyber-card rounded-2xl overflow-hidden flex flex-col reveal-scale delay-300" data-category="dev">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/courses/course-frontend.jpg" alt="Frontend Dasturlash kursi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#00F0FF] text-[#02040A] font-mono font-extrabold text-[11px] px-2.5 py-1 rounded uppercase tracking-wider shadow-[0_0_10px_#00F0FF]">
+                Yuqori Talab
+              </span>
+              <span class="absolute top-3 right-3 bg-[#02040A]/90 text-[#00F0FF] font-mono font-bold text-xs px-2.5 py-1 rounded border border-[#00F0FF]/40">
+                8 oy
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 text-xs text-[#00F0FF] font-mono font-semibold mb-2">
+                  <i data-lucide="layout" class="w-4 h-4"></i>
+                  <span>Web Dev</span>
+                </div>
+                <h3 class="text-2xl font-display text-white mb-2">Frontend (React / Next.js)</h3>
+                <p class="text-slate-300 text-sm line-clamp-2 mb-4 leading-relaxed">
+                  HTML, CSS, TypeScript, React va Next.js 15 asosida interaktiv veb-ilovalarni yaratish.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-tag">React.js</span>
+                  <span class="tech-tag">Next.js 15</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Tailwind</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-[#00F0FF]/15">
+                <button class="view-detail-btn flex-1 py-2.5 rounded-xl bg-[#06122C] hover:bg-[#0A1B3D] text-[#38BDF8] border border-[#00F0FF]/25 font-mono font-bold text-xs transition-colors" data-course-key="frontend">
+                  Batafsil
+                </button>
+                <button class="enroll-course-btn flex-1 py-2.5 rounded-xl btn-neon-primary text-xs uppercase font-extrabold transition-all" data-course="Frontend Dasturlash">
+                  Yozilish
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Backend Dasturlash -->
+          <div class="course-card glass-cyber-card rounded-2xl overflow-hidden flex flex-col reveal-scale delay-100" data-category="dev">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/courses/course-backend.jpg" alt="Backend Dasturlash kursi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#0066FF] text-white font-mono font-extrabold text-[11px] px-2.5 py-1 rounded uppercase tracking-wider shadow-[0_0_10px_#0066FF]">
+                Top Maosh
+              </span>
+              <span class="absolute top-3 right-3 bg-[#02040A]/90 text-[#00F0FF] font-mono font-bold text-xs px-2.5 py-1 rounded border border-[#00F0FF]/40">
+                9 oy
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 text-xs text-[#00F0FF] font-mono font-semibold mb-2">
+                  <i data-lucide="server" class="w-4 h-4"></i>
+                  <span>Architecture</span>
+                </div>
+                <h3 class="text-2xl font-display text-white mb-2">Backend (Go / Python)</h3>
+                <p class="text-slate-300 text-sm line-clamp-2 mb-4 leading-relaxed">
+                  Katta yuklamali mikroservislar, ma'lumotlar ombori, gRPC va xavfsiz backend tizimlari.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-tag">Golang</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">gRPC</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-[#00F0FF]/15">
+                <button class="view-detail-btn flex-1 py-2.5 rounded-xl bg-[#06122C] hover:bg-[#0A1B3D] text-[#38BDF8] border border-[#00F0FF]/25 font-mono font-bold text-xs transition-colors" data-course-key="backend">
+                  Batafsil
+                </button>
+                <button class="enroll-course-btn flex-1 py-2.5 rounded-xl btn-neon-primary text-xs uppercase font-extrabold transition-all" data-course="Backend Dasturlash">
+                  Yozilish
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Mobile Dasturlash (Flutter) -->
+          <div class="course-card glass-cyber-card rounded-2xl overflow-hidden flex flex-col reveal-scale delay-200" data-category="dev">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/courses/course-mobile.jpg" alt="Mobile Dasturlash kursi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#00F0FF] text-[#02040A] font-mono font-extrabold text-[11px] px-2.5 py-1 rounded uppercase tracking-wider shadow-[0_0_10px_#00F0FF]">
+                iOS & Android
+              </span>
+              <span class="absolute top-3 right-3 bg-[#02040A]/90 text-[#00F0FF] font-mono font-bold text-xs px-2.5 py-1 rounded border border-[#00F0FF]/40">
+                7 oy
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 text-xs text-[#00F0FF] font-mono font-semibold mb-2">
+                  <i data-lucide="smartphone" class="w-4 h-4"></i>
+                  <span>Mobile Dev</span>
+                </div>
+                <h3 class="text-2xl font-display text-white mb-2">Mobile Dasturlash (Flutter)</h3>
+                <p class="text-slate-300 text-sm line-clamp-2 mb-4 leading-relaxed">
+                  Bitta kod bilan iOS va Android uchun chiroyli, tezkor va xavfsiz mobil ilovalar yaratish.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-tag">Flutter</span>
+                  <span class="tech-tag">Dart</span>
+                  <span class="tech-tag">Bloc</span>
+                  <span class="tech-tag">Firebase</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-[#00F0FF]/15">
+                <button class="view-detail-btn flex-1 py-2.5 rounded-xl bg-[#06122C] hover:bg-[#0A1B3D] text-[#38BDF8] border border-[#00F0FF]/25 font-mono font-bold text-xs transition-colors" data-course-key="mobile">
+                  Batafsil
+                </button>
+                <button class="enroll-course-btn flex-1 py-2.5 rounded-xl btn-neon-primary text-xs uppercase font-extrabold transition-all" data-course="Mobile Dasturlash">
+                  Yozilish
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Grafik Dizayn & Brending -->
+          <div class="course-card glass-cyber-card rounded-2xl overflow-hidden flex flex-col reveal-scale delay-300" data-category="design">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/courses/course-graphic.jpg" alt="Grafik Dizayn & Brending kursi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#0066FF] text-white font-mono font-extrabold text-[11px] px-2.5 py-1 rounded uppercase tracking-wider shadow-[0_0_10px_#0066FF]">
+                Ijodiy
+              </span>
+              <span class="absolute top-3 right-3 bg-[#02040A]/90 text-[#00F0FF] font-mono font-bold text-xs px-2.5 py-1 rounded border border-[#00F0FF]/40">
+                6 oy
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 text-xs text-[#00F0FF] font-mono font-semibold mb-2">
+                  <i data-lucide="palette" class="w-4 h-4"></i>
+                  <span>Creative Design</span>
+                </div>
+                <h3 class="text-2xl font-display text-white mb-2">Grafik Dizayn & Brending</h3>
+                <p class="text-slate-300 text-sm line-clamp-2 mb-4 leading-relaxed">
+                  Logotip, brend aydentikasi, bannerlar, reklama va vizual konseptsiyalar yaratish.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-tag">Photoshop</span>
+                  <span class="tech-tag">Illustrator</span>
+                  <span class="tech-tag">Branding</span>
+                  <span class="tech-tag">Identity</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-[#00F0FF]/15">
+                <button class="view-detail-btn flex-1 py-2.5 rounded-xl bg-[#06122C] hover:bg-[#0A1B3D] text-[#38BDF8] border border-[#00F0FF]/25 font-mono font-bold text-xs transition-colors" data-course-key="graphic">
+                  Batafsil
+                </button>
+                <button class="enroll-course-btn flex-1 py-2.5 rounded-xl btn-neon-primary text-xs uppercase font-extrabold transition-all" data-course="Grafik Dizayn">
+                  Yozilish
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. UI/UX Dizayn -->
+          <div class="course-card glass-cyber-card rounded-2xl overflow-hidden flex flex-col reveal-scale delay-100" data-category="design">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/courses/course-uiux.jpg" alt="UI/UX Dizayn kursi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#00F0FF] text-[#02040A] font-mono font-extrabold text-[11px] px-2.5 py-1 rounded uppercase tracking-wider shadow-[0_0_10px_#00F0FF]">
+                Xalqaro Talab
+              </span>
+              <span class="absolute top-3 right-3 bg-[#02040A]/90 text-[#00F0FF] font-mono font-bold text-xs px-2.5 py-1 rounded border border-[#00F0FF]/40">
+                6 oy
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 text-xs text-[#00F0FF] font-mono font-semibold mb-2">
+                  <svg class="w-4 h-4 fill-current text-[#00F0FF]" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-5 5h-2v3a5 5 0 1 1-5-5V7a5 5 0 0 1 5-5h2zm-2 5a3 3 0 1 0-3 3 3 3 0 0 0 3-3zm4 0a3 3 0 1 0-3 3h3zm-4 4v3h2a3 3 0 0 0 0-6h-2zm-3 6a3 3 0 1 0 3-3h-3z"/>
+                  </svg>
+                  <span>Interface Design</span>
+                </div>
+                <h3 class="text-2xl font-display text-white mb-2">UI/UX Dizayn</h3>
+                <p class="text-slate-300 text-sm line-clamp-2 mb-4 leading-relaxed">
+                  Mobil ilova va veb-saytlar uchun foydalanuvchiga qulay, estetik interfeyslar yaratish.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-tag">Figma</span>
+                  <span class="tech-tag">UX Research</span>
+                  <span class="tech-tag">Design System</span>
+                  <span class="tech-tag">Wireframing</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-[#00F0FF]/15">
+                <button class="view-detail-btn flex-1 py-2.5 rounded-xl bg-[#06122C] hover:bg-[#0A1B3D] text-[#38BDF8] border border-[#00F0FF]/25 font-mono font-bold text-xs transition-colors" data-course-key="uiux">
+                  Batafsil
+                </button>
+                <button class="enroll-course-btn flex-1 py-2.5 rounded-xl btn-neon-primary text-xs uppercase font-extrabold transition-all" data-course="UI/UX Dizayn">
+                  Yozilish
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Dasturlash Foundation -->
+          <div class="course-card glass-cyber-card rounded-2xl overflow-hidden flex flex-col reveal-scale delay-200" data-category="dev">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/courses/course-foundation.jpg" alt="Dasturlash Foundation kursi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#0066FF] text-white font-mono font-extrabold text-[11px] px-2.5 py-1 rounded uppercase tracking-wider shadow-[0_0_10px_#0066FF]">
+                Noldan Boshlash
+              </span>
+              <span class="absolute top-3 right-3 bg-[#02040A]/90 text-[#00F0FF] font-mono font-bold text-xs px-2.5 py-1 rounded border border-[#00F0FF]/40">
+                3 oy
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 text-xs text-[#00F0FF] font-mono font-semibold mb-2">
+                  <i data-lucide="compass" class="w-4 h-4"></i>
+                  <span>First Step</span>
+                </div>
+                <h3 class="text-2xl font-display text-white mb-2">Dasturlash Foundation</h3>
+                <p class="text-slate-300 text-sm line-clamp-2 mb-4 leading-relaxed">
+                  Dasturlash olamiga ilk qadam: algoritmlar, kompyuter arxitekturasi va mantiqiy fikrlash.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-tag">Algoritmlar</span>
+                  <span class="tech-tag">C Language</span>
+                  <span class="tech-tag">Python Asoslari</span>
+                  <span class="tech-tag">Git</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-[#00F0FF]/15">
+                <button class="view-detail-btn flex-1 py-2.5 rounded-xl bg-[#06122C] hover:bg-[#0A1B3D] text-[#38BDF8] border border-[#00F0FF]/25 font-mono font-bold text-xs transition-colors" data-course-key="foundation">
+                  Batafsil
+                </button>
+                <button class="enroll-course-btn flex-1 py-2.5 rounded-xl btn-neon-primary text-xs uppercase font-extrabold transition-all" data-course="Dasturlash Foundation">
+                  Yozilish
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Kiberxavfsizlik -->
+          <div class="course-card glass-cyber-card rounded-2xl overflow-hidden flex flex-col reveal-scale delay-300" data-category="dev">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/courses/course-security.jpg" alt="Kiberxavfsizlik kursi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#00F0FF] text-[#02040A] font-mono font-extrabold text-[11px] px-2.5 py-1 rounded uppercase tracking-wider shadow-[0_0_10px_#00F0FF]">
+                Maxsus Kiber
+              </span>
+              <span class="absolute top-3 right-3 bg-[#02040A]/90 text-[#00F0FF] font-mono font-bold text-xs px-2.5 py-1 rounded border border-[#00F0FF]/40">
+                8 oy
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 text-xs text-[#00F0FF] font-mono font-semibold mb-2">
+                  <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                  <span>Cybersecurity</span>
+                </div>
+                <h3 class="text-2xl font-display text-white mb-2">Kiberxavfsizlik</h3>
+                <p class="text-slate-300 text-sm line-clamp-2 mb-4 leading-relaxed">
+                  Tizimlarni himoyalash, zaifliklarni skanerlash (Penetration Testing) va Ethical Hacking.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-tag">Ethical Hacking</span>
+                  <span class="tech-tag">Linux Bash</span>
+                  <span class="tech-tag">Network Sec</span>
+                  <span class="tech-tag">Pentest</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-[#00F0FF]/15">
+                <button class="view-detail-btn flex-1 py-2.5 rounded-xl bg-[#06122C] hover:bg-[#0A1B3D] text-[#38BDF8] border border-[#00F0FF]/25 font-mono font-bold text-xs transition-colors" data-course-key="cyber">
+                  Batafsil
+                </button>
+                <button class="enroll-course-btn flex-1 py-2.5 rounded-xl btn-neon-primary text-xs uppercase font-extrabold transition-all" data-course="Kiberxavfsizlik">
+                  Yozilish
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Raqamli Marketing & SMM -->
+          <div class="course-card glass-cyber-card rounded-2xl overflow-hidden flex flex-col reveal-scale delay-100" data-category="design">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/courses/course-marketing.jpg" alt="Raqamli Marketing & SMM kursi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#0066FF] text-white font-mono font-extrabold text-[11px] px-2.5 py-1 rounded uppercase tracking-wider shadow-[0_0_10px_#0066FF]">
+                Tez Natija
+              </span>
+              <span class="absolute top-3 right-3 bg-[#02040A]/90 text-[#00F0FF] font-mono font-bold text-xs px-2.5 py-1 rounded border border-[#00F0FF]/40">
+                5 oy
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 text-xs text-[#00F0FF] font-mono font-semibold mb-2">
+                  <i data-lucide="trending-up" class="w-4 h-4"></i>
+                  <span>Digital Growth</span>
+                </div>
+                <h3 class="text-2xl font-display text-white mb-2">Raqamli Marketing & SMM</h3>
+                <p class="text-slate-300 text-sm line-clamp-2 mb-4 leading-relaxed">
+                  Target reklama, sotuv voronkalari, kontent strategiya va kompaniyalarni daromadga chiqarish.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="tech-tag">Meta Ads</span>
+                  <span class="tech-tag">Kopirayting</span>
+                  <span class="tech-tag">Sales Funnel</span>
+                  <span class="tech-tag">Analytics</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-[#00F0FF]/15">
+                <button class="view-detail-btn flex-1 py-2.5 rounded-xl bg-[#06122C] hover:bg-[#0A1B3D] text-[#38BDF8] border border-[#00F0FF]/25 font-mono font-bold text-xs transition-colors" data-course-key="marketing">
+                  Batafsil
+                </button>
+                <button class="enroll-course-btn flex-1 py-2.5 rounded-xl btn-neon-primary text-xs uppercase font-extrabold transition-all" data-course="Raqamli Marketing">
+                  Yozilish
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Cinematic Neon Laser Divider -->
+    <div class="neon-beam w-full"></div>
+
+    <!-- ========================================================================= -->
+    <!-- 5. MIJOZLAR / BITIRUVCHILAR FEEDBACKLARI (TESTIMONIALS)                   -->
+    <!-- ========================================================================= -->
+    <section id="feedback" class="py-28 relative bg-[#030611]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header with Monimer Serif -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 reveal-init">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-[#00F0FF] bg-[#00F0FF]/10 px-3.5 py-1.5 rounded-full border border-[#00F0FF]/30 shadow-[0_0_12px_rgba(0,240,255,0.2)]">
+            // BITIRUVCHILAR FEEDBACKLARI
+          </span>
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-display font-normal text-white">
+            Bitiruvchilarimiz <span class="text-gradient-electric font-display">Natijalari</span>
+          </h2>
+          <p class="text-slate-300 text-base">
+            Najot Ta'lim bitiruvchilari bugungi kunda nufuzli IT gigantlarida eng yuqori lavozimlarda faoliyat olib bormoqda.
+          </p>
+        </div>
+
+        <!-- Feedback Cards Grid (Proper Heading Hierarchy H3) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Testimonial 1 -->
+          <div class="glass-cyber-card p-8 rounded-2xl flex flex-col justify-between reveal-left delay-100 group">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex text-[#00F0FF] gap-1" role="img" aria-label="5 yulduzli baho">
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                </div>
+                <i data-lucide="quote" class="w-8 h-8 text-[#00F0FF]/30 group-hover:text-[#00F0FF] transition-colors"></i>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed mb-6 italic font-sans">
+                "Dasturlashni noldan boshlagan edim. Najot Ta'lim'da mentorlar har bir xatoyimni chuqur tushuntirishdi. Kurs yakunida tayyorlagan loyihalarim bilan EPAM kompaniyasiga Junior Frontend dasturchi bo'lib ishga kirdim!"
+              </p>
+            </div>
+
+            <div class="flex items-center gap-4 pt-4 border-t border-[#00F0FF]/15">
+              <img src="assets/images/avatars/avatar-jasurbek.jpg" alt="Jasurbek Qodirov fotosurati" class="w-12 h-12 rounded-full object-cover border-2 border-[#00F0FF] shadow-[0_0_10px_#00F0FF]">
+              <div>
+                <h3 class="text-white font-bold text-sm font-sans">Jasurbek Qodirov</h3>
+                <p class="text-xs text-[#00F0FF] font-mono font-semibold">Frontend Bitiruvchisi</p>
+                <p class="text-[11px] text-slate-300">EPAM Systems dasturchisi</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="glass-cyber-card p-8 rounded-2xl flex flex-col justify-between reveal-init delay-200 group">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex text-[#00F0FF] gap-1" role="img" aria-label="5 yulduzli baho">
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                </div>
+                <i data-lucide="quote" class="w-8 h-8 text-[#0066FF]/40 group-hover:text-[#0066FF] transition-colors"></i>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed mb-6 italic font-sans">
+                "UI/UX dizayn kursida eng yoqqan narsa — real buyurtmachilar keyslari bo'ldi. Karyera markazi yordamida Uzum ekotizimiga stajyor bo'lib kirib, hozir to'liq shtatda Product Designer lavozimida ishlayapman."
+              </p>
+            </div>
+
+            <div class="flex items-center gap-4 pt-4 border-t border-[#00F0FF]/15">
+              <img src="assets/images/avatars/avatar-madina.jpg" alt="Madinabonu Alimova fotosurati" class="w-12 h-12 rounded-full object-cover border-2 border-[#0066FF] shadow-[0_0_10px_#0066FF]">
+              <div>
+                <h3 class="text-white font-bold text-sm font-sans">Madinabonu Alimova</h3>
+                <p class="text-xs text-[#38BDF8] font-mono font-semibold">UI/UX Bitiruvchisi</p>
+                <p class="text-[11px] text-slate-300">Uzum Market Product Designer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="glass-cyber-card p-8 rounded-2xl flex flex-col justify-between reveal-right delay-300 group">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex text-[#00F0FF] gap-1" role="img" aria-label="5 yulduzli baho">
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-[#00F0FF]"></i>
+                </div>
+                <i data-lucide="quote" class="w-8 h-8 text-[#00F0FF]/30 group-hover:text-[#00F0FF] transition-colors"></i>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed mb-6 italic font-sans">
+                "AI va Backend kursida sun'iy intellekt agentlarini yaratishni amalda o'rgandim. Qilgan Telegram AI botimiz minglab faol foydalanuvchiga ega bo'ldi. Najot Ta'lim — haqiqiy natija maskani!"
+              </p>
+            </div>
+
+            <div class="flex items-center gap-4 pt-4 border-t border-[#00F0FF]/15">
+              <img src="assets/images/avatars/avatar-sardor.jpg" alt="Sardorbek Ikromov fotosurati" class="w-12 h-12 rounded-full object-cover border-2 border-[#00F0FF] shadow-[0_0_10px_#00F0FF]">
+              <div>
+                <h3 class="text-white font-bold text-sm font-sans">Sardorbek Ikromov</h3>
+                <p class="text-xs text-[#00F0FF] font-mono font-semibold">AI & Backend Bitiruvchisi</p>
+                <p class="text-[11px] text-slate-300">IT Park AI Rezidenti</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Partnership Logos Bar (WCAG AA Compliant Contrast) -->
+        <div class="mt-16 pt-10 border-t border-[#00F0FF]/15 text-center reveal-init delay-200">
+          <p class="text-xs font-mono font-bold uppercase tracking-widest text-slate-300 mb-6">
+            // BITIRUVCHILARIMIZ ISHLAYOTGAN TIZIMLAR
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-80">
+            <span class="text-lg md:text-xl font-black font-mono tracking-widest text-[#00F0FF]">EPAM</span>
+            <span class="text-lg md:text-xl font-black font-mono tracking-widest text-white">UZUM</span>
+            <span class="text-lg md:text-xl font-black font-mono tracking-widest text-[#38BDF8]">IT_PARK</span>
+            <span class="text-lg md:text-xl font-black font-mono tracking-widest text-slate-200">PAYME</span>
+            <span class="text-lg md:text-xl font-black font-mono tracking-widest text-[#0066FF]">CLICK</span>
+            <span class="text-lg md:text-xl font-black font-mono tracking-widest text-white">YANDEX</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Cinematic Neon Laser Divider -->
+    <div class="neon-beam w-full"></div>
+
+    <!-- ========================================================================= -->
+    <!-- 6. KO'P BERILADIGAN SAVOLLAR (FAQ)                                        -->
+    <!-- ========================================================================= -->
+    <section id="faq" class="py-24 relative bg-[#02040A]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-14 space-y-3 reveal-init">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-[#00F0FF] bg-[#00F0FF]/10 px-3.5 py-1.5 rounded-full border border-[#00F0FF]/30 shadow-[0_0_12px_rgba(0,240,255,0.2)]">
+            // SAVOLLAR & JAVOBLAR
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-display font-normal text-white">
+            Eng ko'p beriladigan <span class="text-gradient-electric font-display">savollar</span>
+          </h2>
+        </div>
+
+        <div class="space-y-4 reveal-init delay-100">
+          
+          <!-- FAQ 1 -->
+          <div class="glass-cyber-card rounded-2xl overflow-hidden border border-[#00F0FF]/20">
+            <button class="faq-toggle w-full p-5 text-left font-bold text-white flex items-center justify-between hover:text-[#00F0FF] transition-colors" aria-expanded="false">
+              <span class="text-lg sm:text-xl font-display">Darslarni mutlaqo noldan boshlasa bo'ladimi?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-slate-300 text-sm leading-relaxed border-t border-[#00F0FF]/10 pt-4 font-sans">
+              Ha, albatta! Kurslarimizning aksariyati (masalan, Dasturlash Foundation, Frontend, Grafik va UI/UX dizayn) mutlaqo noldan boshlovchilar uchun ishlab chiqilgan.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="glass-cyber-card rounded-2xl overflow-hidden border border-[#00F0FF]/20">
+            <button class="faq-toggle w-full p-5 text-left font-bold text-white flex items-center justify-between hover:text-[#00F0FF] transition-colors" aria-expanded="false">
+              <span class="text-lg sm:text-xl font-display">Darslar qaysi formatda olib boriladi?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-slate-300 text-sm leading-relaxed border-t border-[#00F0FF]/10 pt-4 font-sans">
+              Darslarimiz zamonaviy jihozlangan filiallarimizda offline shaklda, shuningdek, masofaviy o'quvchilar uchun jonli online formatda tashkil etilgan. Barcha darslarning video yozuvlari saqlanadi.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="glass-cyber-card rounded-2xl overflow-hidden border border-[#00F0FF]/20">
+            <button class="faq-toggle w-full p-5 text-left font-bold text-white flex items-center justify-between hover:text-[#00F0FF] transition-colors" aria-expanded="false">
+              <span class="text-lg sm:text-xl font-display">Ishga joylashishda yordam berasizlarmi?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-slate-300 text-sm leading-relaxed border-t border-[#00F0FF]/10 pt-4 font-sans">
+              Najot Ta'lim qoshidagi Karyera Markazi har bir muvaffaqiyatli bitiruvchiga rezyume tayyorlash, mock intervyular o'tkazish va 100 dan ortiq hamkor kompaniyalarga tavsiya etish orqali amaliy yordam beradi.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="glass-cyber-card rounded-2xl overflow-hidden border border-[#00F0FF]/20">
+            <button class="faq-toggle w-full p-5 text-left font-bold text-white flex items-center justify-between hover:text-[#00F0FF] transition-colors" aria-expanded="false">
+              <span class="text-lg sm:text-xl font-display">Bo'lib to'lash (muddatli to'lov) imkoniyati bormi?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-slate-300 text-sm leading-relaxed border-t border-[#00F0FF]/10 pt-4 font-sans">
+              Ha, oylik to'lov bilan bir qatorda hamkor banklar orqali foizsiz muddatli to'lov imkoniyati mavjud.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Cinematic Neon Laser Divider -->
+    <div class="neon-beam w-full"></div>
+
+    <!-- ========================================================================= -->
+    <!-- 7. MUROJAAT ANKETASI (NEON CYBER LEAD FORM)                               -->
+    <!-- ========================================================================= -->
+    <section id="contact" class="py-28 relative bg-[#030611]">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] glow-orb-cyan blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Info Column (Proper Heading Hierarchy H3) -->
+          <div class="lg:col-span-5 space-y-6 reveal-left">
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-[#00F0FF] bg-[#00F0FF]/10 px-3.5 py-1.5 rounded-full border border-[#00F0FF]/30 shadow-[0_0_12px_rgba(0,240,255,0.2)]">
+              // MUROJAAT QILISH
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-display font-normal text-white leading-tight">
+              Kelajagingiz uchun <br>
+              <span class="text-gradient-electric font-display">ilk qadamni qo'ying</span>
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Anketani to'ldiring! Mutaxassislarimiz 15 daqiqa ichida siz bilan bog'lanib, bepul professional konsultatsiya taqdim etishadi.
+            </p>
+
+            <div class="space-y-4 pt-4">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#00F0FF]/10 text-[#00F0FF] flex items-center justify-center shrink-0 border border-[#00F0FF]/30 shadow-[0_0_10px_rgba(0,240,255,0.2)]">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="text-white font-bold text-sm font-mono">Bosh Filial:</h3>
+                  <p class="text-slate-400 text-xs">Toshkent sh., Chilonzor tumani, Qatortol ko'chasi, 1-mavze</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#0066FF]/10 text-[#38BDF8] flex items-center justify-center shrink-0 border border-[#0066FF]/30 shadow-[0_0_10px_rgba(0,102,255,0.2)]">
+                  <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="text-white font-bold text-sm font-mono">Aloqa Markazi:</h3>
+                  <a href="tel:+998788889888" class="text-[#00F0FF] hover:underline text-xs font-mono font-bold">+998 78 888 98 88</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#00F0FF]/10 text-[#00F0FF] flex items-center justify-center shrink-0 border border-[#00F0FF]/30 shadow-[0_0_10px_rgba(0,240,255,0.2)]">
+                  <i data-lucide="clock" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="text-white font-bold text-sm font-mono">Ish Tartibi:</h3>
+                  <p class="text-slate-400 text-xs">Dushanba - Shanba: 09:00 dan 20:00 gacha</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Neon Form Column -->
+          <div class="lg:col-span-7 reveal-right">
+            <div class="glass-cyber-card p-8 sm:p-10 rounded-3xl border border-[#00F0FF]/40 shadow-[0_0_40px_rgba(0,240,255,0.15)] relative">
+              
+              <h3 class="text-2xl sm:text-3xl font-display text-white mb-2">Bepul Konsultatsiyaga Yozilish</h3>
+              <p class="text-sm text-slate-400 mb-8">Ma'lumotlaringiz maxfiy saqlanadi va uchinchi shaxslarga berilmaydi.</p>
+
+              <form id="leadForm" class="space-y-5" novalidate>
+                
+                <!-- Full Name -->
+                <div>
+                  <label for="userName" class="block text-xs font-mono font-bold uppercase tracking-wider text-[#00F0FF] mb-2">
+                    Ism va Familiyangiz *
+                  </label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                      <i data-lucide="user" class="w-5 h-5"></i>
+                    </span>
+                    <input type="text" id="userName" name="name" autocomplete="name" required placeholder="Masalan: Sardor Aliyev" class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-[#02050D] border border-[#00F0FF]/30 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#00F0FF] focus:ring-1 focus:ring-[#00F0FF] transition-all font-sans">
+                  </div>
+                </div>
+
+                <!-- Phone Number -->
+                <div>
+                  <label for="userPhone" class="block text-xs font-mono font-bold uppercase tracking-wider text-[#00F0FF] mb-2">
+                    Telefon Raqamingiz *
+                  </label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                      <i data-lucide="phone" class="w-5 h-5"></i>
+                    </span>
+                    <input type="tel" id="userPhone" name="tel" autocomplete="tel" required placeholder="+998 (__) ___-__-__" class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-[#02050D] border border-[#00F0FF]/30 text-white placeholder-slate-500 text-sm font-mono focus:outline-none focus:border-[#00F0FF] focus:ring-1 focus:ring-[#00F0FF] transition-all">
+                  </div>
+                </div>
+
+                <!-- Course Dropdown -->
+                <div>
+                  <label for="courseSelect" class="block text-xs font-mono font-bold uppercase tracking-wider text-[#00F0FF] mb-2">
+                    Qiziqqan Kursingizni Tanlang *
+                  </label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                      <i data-lucide="book-open" class="w-5 h-5"></i>
+                    </span>
+                    <select id="courseSelect" required class="w-full pl-11 pr-10 py-3.5 rounded-xl bg-[#02050D] border border-[#00F0FF]/30 text-white text-sm focus:outline-none focus:border-[#00F0FF] focus:ring-1 focus:ring-[#00F0FF] transition-all appearance-none cursor-pointer font-sans">
+                      <option value="" disabled selected>— Kursni tanlang —</option>
+                      <option value="AI Muhandisligi">AI Muhandisligi (AI Engineering)</option>
+                      <option value="AI Avtomatlashtirish">AI Avtomatlashtirish & Agentlar</option>
+                      <option value="Frontend Dasturlash">Frontend Dasturlash (React / Next.js)</option>
+                      <option value="Backend Dasturlash">Backend Dasturlash (Go / Python)</option>
+                      <option value="Mobile Dasturlash">Mobile Dasturlash (Flutter)</option>
+                      <option value="Grafik Dizayn">Grafik Dizayn & Brending</option>
+                      <option value="UI/UX Dizayn">UI/UX Dizayn</option>
+                      <option value="Dasturlash Foundation">Dasturlash Foundation (IT Start)</option>
+                      <option value="Kiberxavfsizlik">Kiberxavfsizlik (Cybersecurity)</option>
+                      <option value="Raqamli Marketing">Raqamli Marketing & SMM</option>
+                    </select>
+                    <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-500">
+                      <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Message Field -->
+                <div>
+                  <label for="userMessage" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-2">
+                    Qo'shimcha Savol (Ixtiyoriy)
+                  </label>
+                  <textarea id="userMessage" rows="3" placeholder="Qaysi vaqtda qo'ng'iroq qilishimiz qulay..." class="w-full p-3.5 rounded-xl bg-[#02050D] border border-[#00F0FF]/25 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#00F0FF] focus:ring-1 focus:ring-[#00F0FF] transition-all resize-none font-sans"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitLeadBtn" class="w-full py-4 rounded-xl btn-neon-primary text-sm font-black uppercase tracking-wider flex items-center justify-center gap-2">
+                  <span>Arizani Yuborish</span>
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+
+                <p class="text-[11px] text-center text-slate-400 font-mono">
+                  Tugmani bosish orqali shaxsiy ma'lumotlarni qayta ishlashga rozilik bildirasiz.
+                </p>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 8. FOOTER (WCAG AA Compliant Heading Hierarchy & Contrast)               -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#010206] border-t border-[#00F0FF]/20 pt-16 pb-12 text-slate-300 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#00F0FF]/10">
+        
+        <!-- Col 1: Logo & Mission -->
+        <div class="lg:col-span-2 space-y-4">
+          <img src="assets/images/logo.svg" alt="Najot Ta'lim Logo" class="h-10 w-auto">
+          <p class="text-xs text-slate-300 max-w-sm leading-relaxed">
+            Najot Ta'lim — O'zbekistonda zamonaviy IT va texnologiyalarni o'rgatuvchi yetakchi innovatsion ta'lim markazi.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <!-- Telegram -->
+            <a href="https://t.me/najottalim" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-lg bg-[#06122C] border border-[#00F0FF]/30 text-[#00F0FF] hover:bg-[#00F0FF] hover:text-[#02040A] flex items-center justify-center transition-all shadow-[0_0_10px_rgba(0,240,255,0.2)]" aria-label="Telegram">
+              <i data-lucide="send" class="w-4 h-4"></i>
+            </a>
+            <!-- Instagram (Inline SVG) -->
+            <a href="https://instagram.com/najottalim" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-lg bg-[#06122C] border border-[#00F0FF]/30 text-[#00F0FF] hover:bg-[#00F0FF] hover:text-[#02040A] flex items-center justify-center transition-all shadow-[0_0_10px_rgba(0,240,255,0.2)]" aria-label="Instagram">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <!-- YouTube (Inline SVG) -->
+            <a href="https://youtube.com/@najottalim" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-lg bg-[#06122C] border border-[#00F0FF]/30 text-[#00F0FF] hover:bg-[#00F0FF] hover:text-[#02040A] flex items-center justify-center transition-all shadow-[0_0_10px_rgba(0,240,255,0.2)]" aria-label="YouTube">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+            <!-- LinkedIn (Inline SVG) -->
+            <a href="https://linkedin.com/company/najottalim" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-lg bg-[#06122C] border border-[#00F0FF]/30 text-[#00F0FF] hover:bg-[#00F0FF] hover:text-[#02040A] flex items-center justify-center transition-all shadow-[0_0_10px_rgba(0,240,255,0.2)]" aria-label="LinkedIn">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Yo'nalishlar -->
+        <div class="space-y-3">
+          <h3 class="text-white font-mono font-bold text-sm tracking-wide text-[#00F0FF]">Yo'nalishlar</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#courses" class="hover:text-[#00F0FF] transition-colors">AI Muhandisligi</a></li>
+            <li><a href="#courses" class="hover:text-[#00F0FF] transition-colors">Frontend Dasturlash</a></li>
+            <li><a href="#courses" class="hover:text-[#00F0FF] transition-colors">Backend Dasturlash</a></li>
+            <li><a href="#courses" class="hover:text-[#00F0FF] transition-colors">UI/UX Dizayn</a></li>
+            <li><a href="#courses" class="hover:text-[#00F0FF] transition-colors">Kiberxavfsizlik</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Navigatsiya -->
+        <div class="space-y-3">
+          <h3 class="text-white font-mono font-bold text-sm tracking-wide text-[#00F0FF]">Sahifalar</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#about" class="hover:text-[#00F0FF] transition-colors">Biz haqimizda</a></li>
+            <li><a href="#courses" class="hover:text-[#00F0FF] transition-colors">Kurslar katalogi</a></li>
+            <li><a href="#feedback" class="hover:text-[#00F0FF] transition-colors">Mijozlar fikrlari</a></li>
+            <li><a href="#faq" class="hover:text-[#00F0FF] transition-colors">Savol-javoblar</a></li>
+            <li><a href="#contact" class="hover:text-[#00F0FF] transition-colors">Murojaat anketasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Filiallar -->
+        <div class="space-y-3">
+          <h3 class="text-white font-mono font-bold text-sm tracking-wide text-[#00F0FF]">Filiallar</h3>
+          <ul class="space-y-2 text-xs text-slate-300 font-mono">
+            <li>📍 Chilonzor filiali</li>
+            <li>📍 Xadra filiali</li>
+            <li>📍 Farg'ona filiali</li>
+            <li>📍 Samarqand filiali</li>
+            <li>📞 +998 78 888 98 88</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom (High Contrast WCAG AA) -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4 font-mono">
+        <p>© 2026 Najot Ta'lim. Barcha huquqlar himoyalangan.</p>
+        <p class="text-[#00F0FF]">Cyber Neon Edition · Enterprise Architecture</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 9. COURSE DETAIL MODAL                                                    -->
+  <!-- ========================================================================= -->
+  <div id="courseModal" class="modal-overlay fixed inset-0 z-50 bg-[#02040A]/85 backdrop-blur-xl flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box glass-cyber-card border border-[#00F0FF]/50 w-full max-w-xl rounded-3xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative shadow-[0_0_50px_rgba(0,240,255,0.25)]">
+      
+      <button id="modalCloseBtn" aria-label="Modalni yopish" class="absolute top-5 right-5 p-2 rounded-full bg-[#06122C] text-slate-400 hover:text-[#00F0FF] transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="pr-8 mb-4">
+        <span id="modalBadge" class="text-xs font-mono font-bold uppercase tracking-wider text-[#00F0FF] bg-[#00F0FF]/10 px-2.5 py-1 rounded border border-[#00F0FF]/30 inline-block mb-2">
+          Kurs
+        </span>
+        <h3 id="modalTitle" class="text-3xl font-display text-white">
+          Kurs nomi
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 p-4 rounded-xl bg-[#02050D] border border-[#00F0FF]/20 mb-6 font-mono">
+        <div>
+          <span class="text-[11px] text-slate-400 block">Davomiyligi:</span>
+          <span id="modalDuration" class="text-sm font-bold text-[#00F0FF]">8 oy</span>
+        </div>
+        <div>
+          <span class="text-[11px] text-slate-400 block">Daraja:</span>
+          <span id="modalLevel" class="text-sm font-bold text-white">Noldan professionalgacha</span>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <p class="text-xs uppercase font-mono font-bold text-[#00F0FF] tracking-wider mb-2">// Kurs tavsifi:</p>
+        <p id="modalDesc" class="text-slate-300 text-sm leading-relaxed">
+          Tavsif matni...
+        </p>
+      </div>
+
+      <div class="mb-8">
+        <p class="text-xs uppercase font-mono font-bold text-[#00F0FF] tracking-wider mb-3">// O'rganiladigan modullar:</p>
+        <ul id="modalTopics" class="space-y-2"></ul>
+      </div>
+
+      <button id="modalEnrollBtn" class="w-full py-4 rounded-xl btn-neon-primary text-xs uppercase font-black tracking-wider flex items-center justify-center gap-2">
+        <span>Ushbu kursga yozilish</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 10. SUCCESS CELEBRATION MODAL                                             -->
+  <!-- ========================================================================= -->
+  <div id="successModal" class="modal-overlay fixed inset-0 z-50 bg-[#02040A]/85 backdrop-blur-xl flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+    <div class="modal-box glass-cyber-card border border-[#00F0FF]/60 w-full max-w-md rounded-3xl p-8 text-center relative shadow-[0_0_50px_rgba(0,240,255,0.3)]">
+      
+      <div class="w-16 h-16 rounded-full bg-[#00F0FF]/10 text-[#00F0FF] border border-[#00F0FF]/40 shadow-[0_0_20px_#00F0FF] flex items-center justify-center mx-auto mb-5">
+        <i data-lucide="check-circle" class="w-8 h-8"></i>
+      </div>
+
+      <h3 id="successTitle" class="text-2xl sm:text-3xl font-display text-white mb-2">Arizangiz Qabul Qilindi!</h3>
+      <p class="text-sm text-slate-300 leading-relaxed mb-6 font-sans">
+        Rahmat, <span id="submittedUserName" class="text-[#00F0FF] font-bold font-mono"></span>! Mutaxassislarimiz 15 daqiqa ichida siz bilan bog'lanishadi.
+      </p>
+
+      <button id="successCloseBtn" class="w-full py-3.5 rounded-xl btn-neon-primary text-xs font-black uppercase tracking-wider">
+        Tushunarli, Rahmat!
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

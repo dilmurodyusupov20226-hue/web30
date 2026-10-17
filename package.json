@@ -1,0 +1,26 @@
+{
+  "name": "najot-talim-landing",
+  "version": "1.0.0",
+  "description": "Najot Ta'lim - Zamonaviy bitta sahifali veb-sayt (Darslik va amaliyot uchun)",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "landing-page",
+    "najot-talim",
+    "tailwind",
+    "single-page"
+  ],
+  "author": "Najot Ta'lim",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0"
+  }
+}
