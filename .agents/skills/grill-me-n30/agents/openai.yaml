@@ -1,6 +1,0 @@
-interface:
-  display_name: "Grill Me N30"
-  short_description: "Antigravity deep discovery and decision stress-testing interview"
-  default_prompt: "Use $grill-me-n30 to stress-test this plan and checkpoint answers to brainstorms/"
-policy:
-  allow_implicit_invocation: true
