@@ -4,6 +4,7 @@
   "description": "Najot Ta'lim - Zamonaviy bitta sahifali veb-sayt (Darslik va amaliyot uchun)",
   "type": "module",
   "scripts": {
+    "build": "echo 'Static build ready'",
     "start": "node server.js",
     "dev": "node server.js"
   },
